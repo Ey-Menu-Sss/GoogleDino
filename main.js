@@ -30,15 +30,12 @@ function game() {
   setInterval(() => {
     
     if(again.style.display === "block"){
-      score.innerHTML = 0;
+      // score.innerHTML = 0;
       localStorage.setItem("bla", b)
       if(localStorage.getItem("bla") > y){
         max.innerHTML = localStorage.getItem("bla");
         y = max.innerHTML;
       }
-
-      // if(b > localStorage.getItem("bla")){
-      // }
     }
     else{
       score.innerHTML++;
@@ -60,6 +57,7 @@ function game() {
         dino.removeAttribute("id");
       }, 0);
       again.addEventListener("click", (e) => {
+        score.innerHTML = 0;
         again.style.display = "none";
         right1 = -10;
         right2 = -450;
@@ -77,8 +75,7 @@ function game() {
         right2 = 0;
       }
     }
-    // console.log(kaktus.style.right);
-    // console.log(kaktus2.style.right);
   }, 1);
 }
 game();
+
