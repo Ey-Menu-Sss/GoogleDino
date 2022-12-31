@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+        *{
+            margin: 0;padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            position: relative;
+            overflow: hidden;
+            width: 900px;
+            margin: 0 auto;
+            height: 250px;
+            border: 2px solid black;
+            display: flex;
+            align-items: flex-end;
+
+        }
+        .dino{
+            width: 80px;
+            /* margin-left: 20px; */
+        }
+        #dino{
+            animation-name: jump;
+            animation-duration: .5s;
+            animation-timing-function: linear;
+
+        }
+        .kaktus{
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            right: 0;
+        }
+        .kaktus2{
+            position: absolute;
+            right: 0; 
+        }
+        @keyframes jump {
+            0%{margin-bottom: 0px;}
+            25%{margin-bottom: 75px;}
+            50%{margin-bottom: 150px;}
+            100%{margin-bottom: 0px;}
+        }
+        .pos{
+            position: absolute;
+            font-size: 80px;
+            left: 400px;
+            top: 80px;
+        }
+        .flex{
+            display: flex;
+        }
+        .SCORE{
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 25px;
+            display: flex;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- dino: -->
+        <img class="dino"src="https://geekanant.gallerycdn.vsassets.io/extensions/geekanant/chrome-dinosaur-game/0.0.1/1638086697139/Microsoft.VisualStudio.Services.Icons.Default" width="100px" alt="">
+        <!-- kaktus: -->
+        <img class="kaktus" src="https://chromedino.com/img/emojis/4-original.png" width="60px" alt="">
+        <img class="kaktus2" src="https://chromedino.com/img/emojis/4-original.png" width="80px" alt="">
+        <div class="bbottom"></div>
+        <i class='bx bx-refresh pos'></i>
+
+        <div class="SCORE">
+        <div class="maxScore"></div>
+        <span class="and"></span>
+        <div class="score"></div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="main.js"></script>
+</body>
+</html>
