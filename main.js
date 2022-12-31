@@ -21,6 +21,12 @@ function move() {
       dino.removeAttribute("id");
     }, 500);
   });
+    window.addEventListener("click", (e) => {
+    dino.setAttribute("id", "dino");
+    setTimeout(() => {
+      dino.removeAttribute("id");
+    }, 500);
+  });
 }
 function game() {
   move();
